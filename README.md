@@ -45,7 +45,7 @@ public class MyBackgroundService : ScheduledJobServiceBase
     //other configuration
 
     "ScheduledJobs": {
-      "ReportCacheBackgroundJob": {
+      "MyBackgroundService": {
         "Expression": "*/1 * * * *",
         "Enabled": true
       }
