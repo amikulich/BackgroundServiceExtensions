@@ -11,7 +11,7 @@ public class MyBackgroundService : ScheduledJobServiceBase
 {
     private readonly IServiceProvider _serviceProvider;
 
-    public ReportCacheBackgroundJob(ScheduledJobOptions<MyBackgroundService> options, 
+    public MyBackgroundService(ScheduledJobOptions<MyBackgroundService> options, 
         ILogger logger, 
         IServiceProvider serviceProvider) : 
         base(options.Expression, logger)
