@@ -7,14 +7,11 @@ Step by step guide
 
 ### 2. Create a class which will be executed by schedule:
 ```
-public class MyBackgroundService : ScheduledJobServiceBase
+public class MyBackgroundService : ScheduledServiceBase
 {
     private readonly IServiceProvider _serviceProvider;
 
-    public MyBackgroundService(ScheduledJobOptions<MyBackgroundService> options, 
-        ILogger logger, 
-        IServiceProvider serviceProvider) : 
-        base(options.Expression, logger)
+    public MyBackgroundService(ScheduledServiceOptions<CacheService> options, IServiceProvider serviceProvider) : base(options.Expression)
     {
         _serviceProvider = serviceProvider;
     }
@@ -36,7 +33,7 @@ public class MyBackgroundService : ScheduledJobServiceBase
     {
         // other registrations
 
-        services.RegisterScheduledJob<MyBackgroundService>(Configuration);
+        services.AddScheduledService<MyBackgroundService>(Configuration);
     }
 
 ### 4. Add a section to appsettings.json:
@@ -44,7 +41,7 @@ public class MyBackgroundService : ScheduledJobServiceBase
   {    
     //other configuration
 
-    "ScheduledJobs": {
+    "ScheduledServices": {
       "MyBackgroundService": {
         "Expression": "*/1 * * * *",
         "Enabled": true
