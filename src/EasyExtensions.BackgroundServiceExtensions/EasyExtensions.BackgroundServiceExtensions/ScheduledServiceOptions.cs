@@ -1,6 +1,6 @@
 ﻿namespace EasyExtensions.BackgroundServiceExtensions
 {
-    public class ScheduledJobOptions<T> where T : ScheduledJobServiceBase 
+    public class ScheduledServiceOptions<T> where T : ScheduledServiceBase
     {
         public string Expression { get; set; }
 
