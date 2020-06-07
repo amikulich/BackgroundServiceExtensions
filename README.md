@@ -11,7 +11,7 @@ public class MyBackgroundService : ScheduledServiceBase
 {
     private readonly IServiceProvider _serviceProvider;
 
-    public MyBackgroundService(ScheduledServiceOptions<CacheService> options, IServiceProvider serviceProvider) : base(options.Expression)
+    public MyBackgroundService(ScheduledServiceOptions<MyBackgroundService> options, IServiceProvider serviceProvider) : base(options.Expression)
     {
         _serviceProvider = serviceProvider;
     }
