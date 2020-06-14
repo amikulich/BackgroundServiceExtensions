@@ -2,14 +2,16 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <Version>0.2.0</Version>
+    <Version>0.2.1</Version>
     <Authors>Artem Mikulich</Authors>
     <Product>Background Service Extensions</Product>
     <RepositoryUrl>https://github.com/amikulich/BackgroundServiceExtensions</RepositoryUrl>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
-    <PackageReleaseNotes>Removed logger from dependency. Added documentation</PackageReleaseNotes>
-    <Description>Package allows to execute background tasks by schedule</Description>
+    <PackageReleaseNotes>Added project url and link to</PackageReleaseNotes>
+    <Description>Package allows to execute background tasks by schedule.</Description>
+    <PackageTags>BackgroundService, Cron, ScheduledTask</PackageTags>
+    <PackageProjectUrl>https://github.com/amikulich/BackgroundServiceExtensions</PackageProjectUrl>
   </PropertyGroup>
 
   <ItemGroup>
